@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Images Grid</title>
+</head>
+<body>
+    <button id ="btn">contact</button>
+    <button id ="btn">contact</button>
+    <button id ="btn">contact</button>
+    <button id ="btn">contact</button>
+    <button id="click">send message</button>
+   
+    <script>
+       var header=document.createElement("div");
+        header.innerHTML="BR Architects";
+        
+        header.style.display="flex";
+        header.style.justifyContent="space-between";
+        header.style.width="100%";
+        header.style.padding="1em";
+        header.style.top="0";
+        header.style.backgroundColor="white";
+        header.style.position="fixed";
+        header.style.fontSize="1.2em";
+        header.style.fontStyle="normal";
+
+
+        var heading=document.createElement("div");
+        heading.style.display="flex";
+        heading.style.gap="2.5em";
+        heading.style.width="25%";
+        
+    
+        var nav1=document.createElement("div");
+        nav1.innerHTML="Projects";
+
+        var nav2=document.createElement("div");
+        nav2.innerHTML="About";
+    
+        var nav3=document.createElement("div");
+        nav3.innerText="Contact";
+
+        header.appendChild(heading);
+        heading.appendChild(nav1);
+        heading.appendChild(nav2);
+        heading.appendChild(nav3);
+
+        console.log(header);
+        document.body.append(header);
+        var a=document.createElement("div");
+         
+        var b=document.createElement("div");
+        
+        a.style.backgroundImage='url("https://www.w3schools.com/w3images/architect.jpg")';
+        a.style.height="110vh";
+        a.style.width="100%";
+        a.style.backgroundSize="cover";
+        a.style.backgroundPosition="center";
+        a.style.backgroundRepeat="no-repeat";
+        a.style.marginBottom="2em";
+
+    
+        b.innerText="BR Architects";
+        b.style.textAlign="center";
+        b.style.paddingTop="5em";
+        b.style.fontWeight="600";
+        b.style.fontSize="3em";
+
+        a.appendChild(b);
+        console.log(a);
+        document.body.appendChild(a);
+       
+        let protext=document.createElement("div");
+         protext.innerText="Projects"
+         protext.style.fontSize="2em";
+        protext.style.fontWeight="600";
+        protext.style.paddingBottom="1em";
+        console.log(protext);
+        document.body.append(protext);
+        
+        let names = ["Summer House", "Brick House", "Renovated", "Barn House", "Summer House", "Brick House", "Renovated", "Barn House"];
+        let images = ["https://www.w3schools.com/w3images/house5.jpg", "https://www.w3schools.com/w3images/house2.jpg", "https://www.w3schools.com/w3images/house3.jpg", "https://www.w3schools.com/w3images/house4.jpg", "https://www.w3schools.com/w3images/house2.jpg", "https://www.w3schools.com/w3images/house5.jpg", "https://www.w3schools.com/w3images/house4.jpg", "https://www.w3schools.com/w3images/house3.jpg"];
+
+        var main = document.createElement("div");
+        main.style.display = "grid";
+        main.style.gridTemplateColumns = "auto auto auto auto"; 
+        main.style.gap = "10px";
+        main.style.width = "100%";
+        main.style.marginBottom = "2em";
+
+        for (let i = 0; i < 8; i++){
+            let el1 = document.createElement("div");
+            let el2 = document.createElement("div");
+
+        
+            el1.style.backgroundImage =`url("${images[i]}")`;
+            el1.style.backgroundRepeat = "no-repeat";
+            el1.style.backgroundSize = "cover";
+            el1.style.height = "200px"; 
+            el1.style.width = "100%";   
+            el1.style.position = "relative"; 
+
+            el2.innerText = names[i];
+            el2.style.background = "black";
+            el2.style.color = "white";
+            el2.style.padding = "10px";
+            el2.style.fontSize = "16px";
+            el2.style.position = "absolute";
+            el2.style.width = "50%";
+            el2.style.textAlign = "center";
+
+            el1.appendChild(el2);
+            main.appendChild(el1);
+        }
+
+        document.body.appendChild(main);
+
+        var about=document.createElement("div");
+        about.innerHTML="About";
+        about.style.display="flex";
+        about.style.width="100%";
+        about.style.backgroundColor="white";
+        about.style.fontSize="2em";
+        about.style.fontStyle="normal";
+
+         
+        console.log(about);
+        document.body.appendChild(about);
+
+       var footer=document.createElement("div");
+        footer.innerText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ";
+        footer.style.padding="50px";
+        footer.style.fontSize="20px";
+        document.body.appendChild(footer);
+
+        let name = ["john doe", "jane doe", "mike Rose","Dan star"];
+        let image = ["https://www.w3schools.com/w3images/team2.jpg", "https://www.w3schools.com/w3images/team1.jpg", "https://www.w3schools.com/w3images/team3.jpg", "https://www.w3schools.com/w3images/team4.jpg"];
+        let char =["CEO&Founder","Architect","Architect","Architect"];
+        let para=["Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.","Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.","Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.","Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum."];
+        let con=["contact","contact","contact","contact"];
+        var mn=document.createElement("div");
+       
+        for (let j= 0; j<4; j++){
+            let el11 = document.createElement("div");
+            let el22 = document.createElement("div");
+            let el33 = document.createElement("div");
+            let el44 = document.createElement("div");
+            let el55 = document.createElement("div");
+          
+            mn.style.display = "flex";
+            mn.style.gridTemplateColumns = "auto auto auto auto"; 
+            mn.style.gap = "10px";
+            mn.style.width = "100%";
+            mn.style.marginBottom = "2em";
+
+        
+            el11.style.backgroundImage =`url("${image[j]}")`;
+            el11.style.backgroundRepeat = "no-repeat";
+            el11.style.backgroundSize = "cover";
+            el11.style.height = "300px"; 
+            el11.style.width = "100%";   
+            el11.style.position = "relative"; 
+
+            el22.innerText = name[j];
+            el22.style.background = "white";
+            el22.style.color = "black";
+            el22.style.bottom= "0px";
+            el22.style.fontSize = "20px";
+            el22.style.position = "absolute";
+            el22.style.width = "100%";
+            el22.style.textAlign = "left";
+            
+            
+            el33.innerText = char[j];
+            el33.style.background = "white";
+            el33.style.color = "grey";
+            el33.style.top= "330px";
+            el33.style.fontSize = "20px";
+            el33.style.position = "absolute";
+            el33.style.textAlign = "left";
+           
+            el44.innerText = para[j];
+            el44.style.background = "white";
+            el44.style.color = "black";
+            el44.style.top= "360px";
+            el44.style.fontSize = "20px";
+            el44.style.position = "absolute";
+            el44.style.textAlign = "left"
+            
+            var btn=document.getElementById("btn");
+            btn.style.color="black";
+            btn.style.fontSize="20px";
+            btn.style.top="450px";
+            btn.style.position="absolute";
+            btn.style.textAlign="center";
+            btn.style.width="100%";
+            btn.style.boxShadow="grey";
+            btn.style.border="none";
+
+            el11.append(el33);
+            el11.append(el44);
+            el11.append(btn);
+            mn.appendChild(el11);
+            document.body.appendChild(mn);
+            }
+
+            var cont=document.createElement("div");
+        var frm=document.createElement("h1");
+        frm.innerText="Contact";
+        var fm=document.createElement("p");
+        fm.innerText="Lets get in touch and talk about your next project.";
+        cont.style.top="2100px";
+        cont.style.position="absolute";
+
+        cont.appendChild(frm);
+        cont.appendChild(fm);
+        let v=["Name","Email","Subject","Comment"];
+        for(i=0;i<4;i++){
+        var r=document.createElement("input");
+        r.placeholder=v[i];
+        r.style.width="1350px";
+        r.style.margin="6px";
+        r.style.padding="10px";
+        cont.appendChild(r);
+        document.body.appendChild(cont);
+        }
+        
+        var p=document.getElementById("click");
+        p.style.color="white";
+        p.style.backgroundColor="black";
+        p.style.padding="15px";
+        p.style.border="none";
+        p.style.margin="5px";
+        p.style.top="2450px";
+        p.style.position="absolute";
+
+        document.body.appendChild(p);
+
+        var foot=document.createElement("div");
+        foot.style.background='url("https://www.w3schools.com/w3images/map.jpg")';
+        foot.style.height="80vh";
+        foot.style.width="98vw";
+        foot.style.top="2550px";
+        foot.style.position="absolute";
+
+        document.body.appendChild(foot);
+       
+        var ft=document.createElement("div");
+
+        ft.innerHTML="Powered by <u>w3.schools</u>";
+        ft.style.textAlign="center";
+        ft.style.backgroundColor="black";
+        ft.style.color="white";
+        ft.style.padding="2%";
+        ft.style.top="3150px";
+        ft.style.position="absolute";
+        ft.style.height="20px";
+        ft.style.width="1500px";
+        
+
+        document.body.appendChild(ft);
+            
+             
+            
+       </script>
+       </body>
+       </html>
